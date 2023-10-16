@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+  <title>Gastos Semanales</title>
+
+  <style>
+
+  body {
+      background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #128e9e, #08a7e6);  
+  background: linear-gradient(to right, #128e9e, #08a7e6); 
+  }
+  header {
+      margin: 30px 0;
+  }
+  .contenido {
+      padding:20px;
+  }
+  .contenido-principal {
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+  }
+  .presupuesto p{
+      margin-bottom: 0;
+      font-weight: bold;
+  }
+  .presupuesto p span {
+      font-weight: normal;
+  }
+  #gastos {
+      margin-bottom: 30px;
+  }
+  h1{
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      color: white;
+  }
+  h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      color:#004e92;
+      font-size: 22px;
+      margin-bottom:30px;
+  }
+  </style>
+</head>
+
+  <body>
+    <div class="container">
+      <header>
+          <h1 class="text-center">Gasto Semanal</h1>
+      </header>
+      <section class="contenido-principal">
+          <div class="form-group w-50">
+              <label for="valor">Presupuesto</label>
+              <input id="presupuesto-main" type="number" class="form-control" placeholder="Ingrese su presupuesto" >
+              <button class="btn btn-success mt-3 presupuesto-btn">Agregar</button>
+          </div>
+          <div id="formulario" class="row d-none">
+              <div class="col ">
+                  <div class="contenido primario">
+                      <h2 class="text-center">Añade tus gastos aqui</h2>
+                      <form id="agregar-gasto" action="#">
+                          <div class="form-group">
+                              <label for="gasto">Gasto:</label>
+                              <input type="text" class="form-control" id="gasto" placeholder="Nombre Gasto">
+                          </div>
+                          <div class="form-group">
+                              <label for="cantidad">Cantidad:</label>
+                              <input type="text" class="form-control" id="cantidad" placeholder="Cantidad en $">
+                          </div>
+
+                          <button type="submit" class="btn btn-primary">Agregar</button>
+                      </form>
+                  </div>
+              </div>
+
+              <div class="col">
+                  <div class="contenido secundario">
+
+                      <h2 class="text-center">Listado</h2>
+
+                      <div id="gastos">
+                          <ul class="list-group"></ul>
+                      </div>
+                      <div id="presupuesto" class="presupuesto">
+                          <div class="alert alert-primary">
+                              <p>Presupuesto: $ <span id="total"></span> </p>
+                          </div>
+                          <div class="restante alert alert-success">
+                              <p>Restante: $ <span id="restante"></span></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+
+
+  <script src="index.js"></script>
+  </body>
+</html>
